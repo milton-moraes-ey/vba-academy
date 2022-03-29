@@ -6,7 +6,7 @@
 
 **Macro Relativa:** os comandos são executados da maneira que foi gravada, mas a partir da célula ativa, ou seja, da célula que está selecionada no momento. 
 
-## Noções básicas sobre objetos, métodos,m propriedades e eventos
+## Noções básicas sobre objetos, métodos, propriedades e eventos
 
 ### **Objetos e coleções**
 Um objeto representa um elemento de um aplicativo, como uma planilha, uma célula, um gráfico, um formulário ou um relatório. No código do Visual Basic, você deve identificar um objeto antes de aplicar um dos métodos do objeto ou alterar o valor de uma das suas propriedades.
