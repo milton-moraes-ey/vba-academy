@@ -16,6 +16,33 @@ String|	1 por caractere |	aprox. 65500
 Object|	4	|Qualquer objeto
 Variant|16|	Quaquer tipo de dado
 
+### **Como obter o maior e menor valor sem utilizar IFs**
+
+````VB
+
+Sub obter_maior_e_menor_valor(a As Integer, b As Integer)
+
+  ' Menor valor
+  Dim menorValor As Integer
+  menorValor = -(a < b) * a - (a > b) * b
+  MsgBox "Menor valor é: " & menorValor
+
+  ' Maior valor
+  Dim maiorValor As Integer
+  maiorValor = -(a > b) * a - (a < b) * b
+  MsgBox "Maior valor é: " & maiorValor
+
+End Sub
+````
+
+Em VBA valores *truth* sáo iguais a -1 e valores *falsy* sáo 0:
+
+| Booleans | Value
+---| ---
+True | -1 
+False | 0
+
+
 
 
 
