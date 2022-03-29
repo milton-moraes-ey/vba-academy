@@ -1,4 +1,5 @@
 # 002 Variáveis em VBA
+
 ### **Declaração de variáveis**
 Tabela representativa da quantidade de memória utilizada por tipo de variável e sua respectiva faixa de valores do Visual Basic for Applications.
 
@@ -11,9 +12,10 @@ Single |	4	| - 3,4E38 a +3,4E38
 Double |	8 |	-1,7E308 a +1,7E308
 Currency (Moeda) |	8	|-9223372036854,5808 a 9223372036854,5807
 Date|	8|	01/01/100 a 31/12/9999
-String|	1| por caractere	aprox 65500
+String|	1 por caractere |	aprox. 65500
 Object|	4	|Qualquer objeto
 Variant|16|	Quaquer tipo de dado
+
 
 
 
