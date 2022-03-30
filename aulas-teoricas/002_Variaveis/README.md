@@ -62,11 +62,12 @@ Public | Todos os Módulos
 Global | Todos os Módulos
 Static | Apenas Procedimento
 
-
 </div>
+
+
 *obs: Static retêm o valor da variável do Procedimento após o término da sua execução.*
 
-
+---
 
 
 
