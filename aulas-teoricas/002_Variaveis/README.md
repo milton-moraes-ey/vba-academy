@@ -3,6 +3,8 @@
 ### **Declaração de variáveis**
 Tabela representativa da quantidade de memória utilizada por tipo de variável e sua respectiva faixa de valores do Visual Basic for Applications.
 
+<div align="center">
+
 Tipo de dados | Bytes Usados | Faixa de Valores 
 --- | --- | --- 
 Boolean | 2 | Verdadeiro ou Falso 
@@ -15,6 +17,8 @@ Date|	8|	01/01/100 a 31/12/9999
 String|	1 por caractere |	aprox. 65500
 Object|	4	|Qualquer objeto
 Variant|16|	Quaquer tipo de dado
+
+</div>
 
 ### **Como obter o maior e menor valor sem utilizar IFs**
 
@@ -36,13 +40,31 @@ End Sub
 ````
 
 Em VBA valores *truth* sáo iguais a -1 e valores *falsy* sáo 0:
+<div align="center">
 
 | Booleans | Value
----| ---
+---| ---|
 True | -1 
 False | 0
 
+</div>
+---
 
+### **Escopo de Variáveis**
+
+<div align="center">
+
+| Tipos de Variáveis | Escopo
+---| ---|
+Dim | Procedimento / Módulo
+Private | Apenas Módulo
+Public | Todos os Módulos
+Global | Todos os Módulos
+Static | Apenas Procedimento
+
+
+</div>
+*obs: Static retêm o valor da variável do Procedimento após o término da sua execução.*
 
 
 
