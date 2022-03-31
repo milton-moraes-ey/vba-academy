@@ -114,6 +114,26 @@ Sub obtendo_valores_da_planilha_salvando_em_vetor()
 End Sub
 
 ```
+---
+
+### **PROCV com Matrizes no VBA**
+
+```vbnet
+Sub Procv()
+
+    Dim matrizTabela()
+    Dim valorProcurado()
+    Dim valorResultado As Range
+    
+    matrizTabela() = Range("B2:E5571").Value
+    valorProcurado() = Range("H3:H771").Value
+    Set valorResultado = Range("I3:I62")
+    
+    valorResultado = WorksheetFunction.VLookup(valorProcurado, matrizTabela, 2, 0)
+    
+
+End Sub
+```
 
 ---
 ## Listas de exercícios
