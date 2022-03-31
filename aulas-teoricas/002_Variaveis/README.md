@@ -134,6 +134,70 @@ Sub Procv()
 
 End Sub
 ```
+---
+
+### **Arrays - LBound & UBound**
+
+**Como verificar o comprimento de um vetor?**
+
+```vbnet
+Sub tamanhoDoVetor()
+
+    Dim Arr(5) As String
+    Dim arrLen As Integer
+    
+    ' Mostrar o índice superior do vetor Arr
+    MsgBox UBound(Arr) ' retorna 5
+    
+    ' Mostrar o índice inferior do vetor Arr
+    MsgBox LBound(Arr) ' retorna 0
+    
+    ' Tamanho do vetor se seu índice inferior seja = 0:
+    If LBound(Arr) = 0 Then
+        arrLen = UBound(Arr) + 1
+    End If
+
+    
+    ' Tamanho de um vetor se o índice inferior for diferente de 0:
+    If LBound(Arr) <> 0 Then
+        arrLen = UBound(Arr) - LBound(Arr) + 1
+    End If
+
+        
+    ' Construindo a mesma lógica em um unico if:
+    If LBound(Arr) = 0 Then
+        arrLen = UBound(Arr) + 1
+    Else
+        arrLen = UBound(Arr) - LBound(Arr) + 1
+    End If
+        MsgBox arrLen
+
+End Sub
+```
+
+```vbnet
+
+Sub limitesDaMatriz()
+
+    Dim mtz(5, 4) As String
+    
+    
+    'no caso de matrizes, devemos especificar qual dimensão iremos analisar seus limites
+    
+    ' Verificar o menor índice da linha (índice 1 = primeira dimensão)
+    MsgBox LBound(mtz, 1) ' retorna 0
+    
+    ' Verificar o menor índice da coluna (índice 2 = segunda dimensão)
+    MsgBox LBound(mtz, 2) ' retorna 0
+
+     ' Verificar o maior índice da linha (índice 1 = primeira dimensão)
+    MsgBox UBound(mtz, 1) ' retorna 5
+    
+    ' Verificar o maior índice da coluna (índice 2 = segunda dimensão)
+    MsgBox UBound(mtz, 2) ' retorna 4
+    
+End Sub
+```
 
 ---
 ## Listas de exercícios
