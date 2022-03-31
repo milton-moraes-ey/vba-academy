@@ -69,7 +69,51 @@ Static | Apenas Procedimento
 
 ---
 
+### Arrays - **Relacionar Matriz com Intervalos de células**
 
+```vbnet
+Sub macro()
+' Dado o vetor
+Dim dSemana(1 To 7) As String 'Vetor => Uma lina
+dSemana(1) = "Domingo"
+dSemana(2) = "Segunda"
+dSemana(3) = "Terça"
+dSemana(4) = "Quarta"
+dSemana(5) = "Quinta"
+dSemana(6) = "Sexta"
+dSemana(7) = "Sábado"
+
+' Atribuindo valores de um vetor à céluas de uma planilha. Lembrando que vetores são uma linha (Unidimensional)
+Range("B3:h3").Value = dSemana
+
+' Atribuindo os valores de um vetor, à células de uma planilha que estão dispostas na Vertical (coluna)
+' Para executar essa ação, deve-se utilizar, dentro do VBA a função "transpor" do excel
+Range("B5:B11").Value = Application.Transpose(dSemana)
+End Sub
+```
+
+```vbnet
+
+Sub obtendo_valores_da_planilha_salvando_em_vetor()
+
+    ' Não colocar tipoo de dado e o vetor tem que ser dinâmico
+    Dim dSemana()
+    dSemana() = Range("B3:H3").Value
+    
+    ' No caso desse tipo de situação, apesar de termos declarado um "vetor", ao puxar os dados
+    ' da planilha para o código, o VBA entende como uma MATRIZ - apesar dos valores estarem somente em uma
+    ' única linha
+    
+    ' Não funciona
+    MsgBox dSemana(1)
+    
+    ' Para pegar o valor, devemos especificar linha e a coluna, pois o VBA entende como MATRIZ.
+    MsgBox dSemana(1, 1)
+    
+
+End Sub
+
+```
 
 ---
 ## Listas de exercícios
