@@ -40,3 +40,18 @@ Planilha4.Range("A4") = "Novo valor pra essa plan"
 End Sub
 
 ```
+---
+
+### **Numero de linhas de um intervalo**
+
+````VB
+
+Sub numeroDeLinhasDeUmIntervalo()
+
+' Como contar o número de linhas de um intervalo
+Dim n As Integer
+n = Range("A1").CurrentRegion.Rows.Count
+MsgBox n
+
+End Sub
+````
