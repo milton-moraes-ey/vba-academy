@@ -91,3 +91,6 @@ Sub localizandoLinhaDeDeterminadoValor()
     MsgBox nLinha 
 End Sub
 ```
+
+---
+
