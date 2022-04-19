@@ -10,5 +10,6 @@ Estudos de VBA seguindo o curso do VBA academy.
 - [Módulo 02 - Variáveis](./aulas-teoricas/002_Variaveis/)
 - [Módulo 03 - Objeto Range](./aulas-teoricas/003_ObjetoRange/)
 - [Módulo 04 - Estruturas de Decisão](./aulas-teoricas/004_EstruturasDecisao/)
+- [Módulo 05 - Estruturas de Repetição](./aulas-teoricas/005_EstruturasRepeticao/)
 
 ### Projetos construídos
