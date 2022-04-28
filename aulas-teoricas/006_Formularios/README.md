@@ -130,3 +130,132 @@ Me.ListBox1.List(nLinha, 0) = novoValor
 
 End Sub
 ```
+
+---
+
+## Seleção múltipla na ListBox
+
+Nas propriedades da *ListBox* temos uma propriedade chamada **MultiSelect,** que disponibiliza três opções de valores:
+
+1. 0 - **fmMulltiSelectSingle** ⇒ Valor padrão, que nos permite selecionar um único item por vez
+2. 1 - **fmMulltiSelectMulti** ⇒ Permite escolher mais de um item da ListBox ao clicar sobre.
+3. 2 - **fmMulltiSelectExtended** ⇒ Permite que o usuário clique e arraste o mouse para selecionar vários itens da *ListBox*. Porém, só permite múltiplas seleções ao clicar **se a tecla CTRL estiver pressionada**.
+
+Em tempo de execução, podemos fazer o tratamento de múltiplos itens selecionados através da propriedade **Selected**. Veja um exemplo de código que selecionamos múltiplos itens da lista e guardamos a soma dos itens em uma label utilizando o evento Change da *ListBox.*
+
+```visual-basic
+Private Sub ListBox1_Change()
+Dim i As Integer, n As Integer
+    n = 0
+    For i = 0 To ListBox1.ListCount - 1
+        If ListBox1.Selected(i) = True Then
+            n = n + ListBox1.List(i, 1)
+        End If
+    Next i
+    Label1.Caption = VBA.FormatCurrency(n, 2)
+End Sub
+```
+
+---
+
+## Filtro avançado
+
+**A Macro:**
+
+```visual-basic
+Sub filtroAvancado()
+
+Dim baseDeDados As Range, intervaloCriterios As Range, destinoFiltro As Range
+Dim novaBase As Range
+Set baseDeDados = Range("A1").CurrentRegion
+Set intervaloCriterios = Range("G1:J2")
+Set destinoFiltro = Range("G4:J4")
+
+Range("I2").Value = UserForm.CB_Criterio1.Value
+Range("J2").Value = UserForm.CB_Criterio2.Value
+
+baseDeDados.AdvancedFilter xlFilterCopy, intervaloCriterios, destinoFiltro
+
+Set novaBase = destinoFiltro.CurrentRegion.Offset(1, 0)
+UserForm.ListBox.RowSource = novaBase.Address
+UserForm.Label.Caption = UserForm.ListBox.ListCount - 1 _
+& " Registros encontrados"
+
+End Sub
+```
+
+**O Formulário:**
+
+```visual-basic
+Private Sub ComboBox1_Change()
+Call filtroAvancado
+End Sub
+
+Private Sub ComboBox2_Change()
+Call filtroAvancado
+End Sub
+
+Private Sub UserForm_Initialize()
+Me.Height = 500
+Me.Width = 600
+
+Dim base As Range
+Set base = Range("A1").CurrentRegion
+
+ListBox.RowSource = base.Offset(1, 0).Address
+End Sub
+```
+
+## Filtro Avançado com Intervalo de Datas
+
+**A Função:**
+
+```visual-basic
+Function IntervaloDados() As String
+
+Dim baseDeDados As Range, intervaloDeCriterios As Range, destino As Range
+
+Set baseDeDados = Planilha1.Range("A1").CurrentRegion
+Set intervaloDeCriterios = Planilha2.Range("A1:G2")
+Set destino = Planilha2.Range("A4:F4")
+
+baseDeDados.AdvancedFilter xlFilterCopy, intervaloDeCriterios, destino
+
+IntervaloDados = destino.CurrentRegion.Offset(1, 0).Address(, , , True)
+
+End Function
+```
+
+**O formulário:**
+
+```visual-basic
+Private Sub btnFiltrar_Click()
+
+Dim dataInicial As Date, dataFinal As Date
+dataInicial = txtDataInicial.Value
+dataFinal = txtDataFinal.Value
+
+' Limpar os dados do filtro anterior
+Planilha2.Range("A2:G2").Clear
+
+' Associar os campos do range = intervalo de critérios com os txt's do Formulário:
+With Planilha2
+    .Range("A2").Value = txtNome.Value
+    .Range("C2").Value = txtNacionalidade.Value
+    .Range("D2").Value = txtTime.Value
+    .Range("F2").Value = ">=" & VBA.Format(dataInicial, "mm/dd/yyyy")
+    .Range("G2").Value = "<=" & VBA.Format(dataFinal, "mm/dd/yyyy")
+End With
+
+' Referenciar a ListBox através do RowSource o Intervalo de Dados retornado pela Função
+ListBox.RowSource = IntervaloDados
+
+Label6.Caption = "Total de registros " & ListBox.ListCount - 1
+    
+End Sub
+
+Private Sub UserForm_Initialize()
+Me.Height = 419
+Me.Width = 604
+End Sub
+```
