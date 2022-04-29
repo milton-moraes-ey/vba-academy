@@ -8,7 +8,7 @@ Exemplos:
 
 ### On error GoTo
 
-```visual-basic
+```VB
 Private Sub CommandButton1_Click()
 On Error GoTo erro:
     
@@ -46,7 +46,7 @@ No código acima fazemos um cálculo da raiz quadrada de um número inputado por
 - Ao cair em uma situação de erro, esse comando simplesmente ignora o erro e segue para os próximos comandos contidos na sequência do código.
 - Muito utilizado em Loops.
 
-```visual-basic
+```VB
 Sub calcular()
 Dim rng As Range
 On Error Resume Next

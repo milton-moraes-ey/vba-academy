@@ -29,7 +29,7 @@ Porém, para conseguirmos adicionar um item com a propriedade **List** antes dev
 
 Veja exemplo de:
 
-```visual-basic
+```VB
 sub addDados()
 Me.ListBox1.List(0, 0) = "Janeiro"
 Me.ListBox1.List(0, 1) = "Fevereiro"
@@ -40,7 +40,7 @@ end sub
 
 Exemplo contornando o problema das 10 colunas com a propriedade List:Me.ListBox1.List = Planilha2.Range("A1:L12").Value
 
-```visual-basic
+```VB
 sub addMes()
 	Me.ListBox1.List = Planilha2.Range("A1:L12").Value
 end sub
@@ -50,7 +50,7 @@ end sub
 
 Dias da semana com um índice.
 
-```visual-basic
+```VB
 sub addDiasSemana()
 	Dim i As Integer
 	For i = 1 To 7
@@ -71,7 +71,7 @@ Primeiro exemplo:
 
 A partir de uma matriz em um intervalo de céluas
 
-```visual-basic
+```VB
 Private Sub CommandButton1_Click()
 Dim m() As Variant
 
@@ -85,7 +85,7 @@ Segundo exemplo
 
 A partir de uma matriz criada em código:
 
-```visual-basic
+```VB
 Private Sub CommandButton2_Click()
 Dim d(1 To 7) As String
 Dim i As Integer
@@ -104,7 +104,7 @@ OBS: Semelhante ao Target.
 
 OBS: O ListIndex é diferente ao ListCount que conta o número TOTAL de linhas da *ListBox*
 
-```visual-basic
+```VB
 sub numeroDaLinha()
 	dim nLinha as integer
 	nLinha = me.ListBox1.ListIndex
@@ -116,7 +116,7 @@ Como alterar o valor de um determinado dado da ListBox?
 
 OBS: Isso só é possível se o dado a ser alterado for adicionado à *ListBox* através de uma Matriz ou através do método **AddItem** e **List.**  Da mesma forma, podemos usar o método **RemoveItem** para apagar determinado dado da *ListBox.*
 
-```visual-basic
+```VB
 
 Sub novoValor()
 
@@ -143,7 +143,7 @@ Nas propriedades da *ListBox* temos uma propriedade chamada **MultiSelect,** que
 
 Em tempo de execução, podemos fazer o tratamento de múltiplos itens selecionados através da propriedade **Selected**. Veja um exemplo de código que selecionamos múltiplos itens da lista e guardamos a soma dos itens em uma label utilizando o evento Change da *ListBox.*
 
-```visual-basic
+```VB
 Private Sub ListBox1_Change()
 Dim i As Integer, n As Integer
     n = 0
@@ -162,7 +162,7 @@ End Sub
 
 **A Macro:**
 
-```visual-basic
+```VB
 Sub filtroAvancado()
 
 Dim baseDeDados As Range, intervaloCriterios As Range, destinoFiltro As Range
@@ -186,7 +186,7 @@ End Sub
 
 **O Formulário:**
 
-```visual-basic
+```VB
 Private Sub ComboBox1_Change()
 Call filtroAvancado
 End Sub
@@ -210,7 +210,7 @@ End Sub
 
 **A Função:**
 
-```visual-basic
+```VB
 Function IntervaloDados() As String
 
 Dim baseDeDados As Range, intervaloDeCriterios As Range, destino As Range
@@ -228,7 +228,7 @@ End Function
 
 **O formulário:**
 
-```visual-basic
+```VB
 Private Sub btnFiltrar_Click()
 
 Dim dataInicial As Date, dataFinal As Date

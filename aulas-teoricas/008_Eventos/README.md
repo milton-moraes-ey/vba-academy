@@ -10,7 +10,7 @@
 
 Funcionalidade importante: Interseção entre dois intervalos. Suponhamos que queremos executar uma macro que execute quando determinada célula for alterada dentro de um conjunto de células específicos. 
 
-```visual-basic
+```VB
 Private Sub Worksheet_Change(ByVal Target As Range)
 
 If Not Intersect(Target, Range("C2:D10")) Is Nothing Then

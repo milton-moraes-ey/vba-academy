@@ -4,7 +4,7 @@
 
 **Syntaxe**:
 
-```visual-basic
+```VB
 For {VAR_NUMERICA} = {VALOR} To {NUM_REPETICOES}
 	'
   'CÓDIGO A SER EXECUTADO DENTRO DO LOOP
@@ -16,7 +16,7 @@ Next
 
 Tanto a sub ex01 e a sub ex02 preenchem as celulas A1:A5 com os números de 1 a 5
 
-```visual-basic
+```VB
 Sub ex01()
     Dim i As Integer, n As Integer: n = 1
     For i = 1 To 5
@@ -26,7 +26,7 @@ Sub ex01()
 End Sub
 ```
 
-```visual-basic
+```VB
 Sub ex02()
     Dim i As Integer
     For i = 1 To 5
@@ -35,7 +35,7 @@ Sub ex02()
 End Sub
 ```
 
-```visual-basic
+```VB
 Sub ex03()
 
 Dim i As Integer, n As Integer
@@ -51,7 +51,7 @@ End Sub
 
 - Adicionando os meses do ano e os dias da semana em uma Combobox:
 
-```visual-basic
+```VB
 sub addDiaSemana()
 
 Dim i As Integer
@@ -62,7 +62,7 @@ Next
 end sub
 ```
 
-```visual-basic
+```VB
 sub addMesesComboBox
 
 Dim i As Integer
@@ -79,7 +79,7 @@ end sub
 
 **Exemplos:**
 
-```visual-basic
+```VB
 Sub exemplo01()
 
 Dim i As Integer
@@ -94,7 +94,7 @@ Cells(i, 1).Value = Date
 End Sub
 ```
 
-```visual-basic
+```VB
 Sub exemplo02()
 
 Dim i As Integer
@@ -118,7 +118,7 @@ End Sub
 
 **Exemplos:**
 
-```visual-basic
+```VB
 Sub EXEMPLO01()
 
 Dim i As Integer
@@ -133,7 +133,7 @@ Cells(i, 1).Value = Date
 End Sub
 ```
 
-```visual-basic
+```VB
 Sub exemplo02()
 
 Dim i As Integer
@@ -158,7 +158,7 @@ End Sub
 
 **Exemplos:**
 
-```visual-basic
+```VB
 Sub EXEMPLO01()
 
 Dim i As Integer
@@ -173,7 +173,7 @@ Cells(i, 1).Value = Date
 End Sub
 ```
 
-```visual-basic
+```VB
 Sub exemplo02()
 
 Dim i As Integer

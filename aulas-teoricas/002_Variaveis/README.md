@@ -71,7 +71,7 @@ Static | Apenas Procedimento
 
 ### Arrays - **Relacionar Matriz com Intervalos de células**
 
-```vbnet
+```VB
 Sub macro()
 ' Dado o vetor
 Dim dSemana(1 To 7) As String 'Vetor => Uma lina
@@ -92,7 +92,7 @@ Range("B5:B11").Value = Application.Transpose(dSemana)
 End Sub
 ```
 
-```vbnet
+```VB
 
 Sub obtendo_valores_da_planilha_salvando_em_vetor()
 
@@ -118,7 +118,7 @@ End Sub
 
 ### **PROCV com Matrizes no VBA**
 
-```vbnet
+```VB
 Sub Procv()
 
     Dim matrizTabela()
@@ -140,7 +140,7 @@ End Sub
 
 **Como verificar o comprimento de um vetor?**
 
-```vbnet
+```VB
 Sub tamanhoDoVetor()
 
     Dim Arr(5) As String
@@ -175,7 +175,7 @@ Sub tamanhoDoVetor()
 End Sub
 ```
 
-```vbnet
+```VB
 
 Sub limitesDaMatriz()
 
