@@ -30,7 +30,7 @@ Opções de botões, ícones do MsgBox:
 
 ⇒ No msgbox podemos juntar botões para formar configurações específicas de mensagens para usuário, somando os nomes dos componentes (também pode usar os valores numéricos para fazer a mesma lógica abaixo). Exemplo:
 
-```visual-basic
+```VB
 sub msgbox()
 	MsgBox "Texto para o usuário", vbInformation + vbYesNo
 end sub
@@ -40,7 +40,7 @@ end sub
 
 ### Interagindo com as MsgBox:
 
-```visual-basic
+```VB
 Sub msgBox()
 
 Dim Resp As VbMsgBoxResult
@@ -66,7 +66,7 @@ End Sub
 
 1. Seleciona uma imagem e carrega em um Controle Image de um Formulário:
 
-```visual-basic
+```VB
 
 Private Sub CommandButton1_Click()
 
@@ -83,7 +83,7 @@ End Sub
 
 1. Seleciona um arquivo especificado na variável TIPO e abre o arquivo no EXCEL
 
-```visual-basic
+```VB
 Sub getOpenFileNameExemplo()
 
 Dim c As Variant
@@ -103,7 +103,7 @@ End Sub
 
 1. Abrindo arquivos que não sou do tipo xlsx (ou outro comátivel com Excel) em seus próprios tipos de arquivo. (abre arquivos .TXT no notepad por exemplo)
 
-```visual-basic
+```VB
 Sub flwHyperlink()
 
 Dim C As Variant
@@ -119,7 +119,7 @@ End Sub
 
 1. Trabalhando com seleção múltipla de arquivos
 
-```visual-basic
+```VB
 Sub multiplosArquivos()
 
 Dim C As Variant
@@ -139,7 +139,7 @@ End Sub
 
 ### Obter caminho de uma pasta
 
-```visual-basic
+```VB
 Sub GetFolder()
 
 Dim pasta As String
