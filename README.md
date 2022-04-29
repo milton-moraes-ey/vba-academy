@@ -14,4 +14,6 @@ Estudos de VBA seguindo o curso do VBA academy.
 - [Módulo 06 - Formulários e Controles de Formulários](./aulas-teoricas/006_Formularios/)
 - [Módulo 07 - Tratamento de Erros](./aulas-teoricas/007_TratamentoErros/)
 - [Módulo 08 - Eventos](./aulas-teoricas/008_Eventos/)
+- [Módulo 09 - Eventos](./aulas-teoricas/009_CaixasDialogo/)
+
 ### Projetos construídos
